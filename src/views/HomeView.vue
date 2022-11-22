@@ -6,7 +6,7 @@
         v-model="searchQuery"
         @input="getSearchResults"
         placeholder="Search for a city or state"
-        class="py-2 px-1 w-full bg-transparent border-b focus:border-weather-secondary focus:outline-none focus:shadow-[0px_1px_0_0_#004E71]"
+        class="text-white py-2 px-1 w-full bg-transparent border-b focus:border-white focus:outline-none focus:shadow-[0px_1px_0_0_#004E71]"
       />
       <ul
         class="absolute bg-white text-black w-full shadow-md py-2 px-1 top-[66px]"
@@ -45,8 +45,8 @@
 import { ref } from "vue";
 import axios from "axios";
 import { useRouter } from "vue-router";
-// import CityCardSkeleton from "../components/CityCardSkeleton.vue";
-// import CityList from "../components/CityList.vue";
+import CityCardSkeleton from "../components/CityViewSkeleton.vue";
+import CityList from "../components/CityList.vue";
 const router = useRouter();
 const previewCity = (searchResult) => {
   const [city, state] = searchResult.place_name.split(",");
@@ -59,6 +59,7 @@ const previewCity = (searchResult) => {
       preview: true,
     },
   });
+  console.log(searchResult.text);
 };
 const mapboxAPIKey =
   "pk.eyJ1Ijoiam9obmtvbWFybmlja2kiLCJhIjoiY2t5NjFzODZvMHJkaDJ1bWx6OGVieGxreSJ9.IpojdT3U3NENknF6_WhR2Q";
@@ -84,5 +85,3 @@ const getSearchResults = () => {
   }, 300);
 };
 </script>
-
-<style lang="scss" scoped></style>

@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "weather-primary": "#A9CCE3",
-        "weather-secondary": "#6C3483",
+        "weather-primary": "#616A6B",
+        "weather-secondary": "#F0B27A",
       },
     },
     fontFamily: {
