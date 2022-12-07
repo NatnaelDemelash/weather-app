@@ -1,6 +1,8 @@
 # weather-app
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vue3 with Tailwindcss a local storage based weather app
+
+Project Demo: https://natnaeldemelash.github.io/
 
 ## Recommended IDE Setup
 
@@ -28,4 +30,4 @@ npm run dev
 npm run build
 ```
 
-Project Demo: (https://natnaeldemelash.github.io/)
+
