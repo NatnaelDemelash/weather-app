@@ -31,6 +31,8 @@ const getCities = async () => {
     });
   }
 };
+
+//get city's lists
 await getCities();
 const router = useRouter();
 const goToCityView = (city) => {
